@@ -533,56 +533,7 @@
         font-size: 14px;
     }
 }
- /* Hero Section Responsive Styling */
-@media (max-width: 768px) {
-    .hero .container {
-        display: flex;
-        flex-direction: column; /* Stack items vertically for smaller screens */
-        align-items: center;
-        text-align: center; /* Center the text for better visibility */
-    }
-
-    .hero img {
-        width: 100%; /* Full width for smaller screens */
-        margin-bottom: 20px;
-    }
-
-    .hero div {
-        width: 100%; /* Ensure the text container is full-width */
-    }
-}
-
-@media (max-width: 480px) {
-    .hero .container {
-        display: flex;
-        flex-direction: column; /* Maintain vertical stacking on very small screens */
-        text-align: center; /* Keep the text centered */
-    }
-
-    .hero img {
-        width: 100%; /* Full width for smaller screens */
-        height: auto; /* Maintain aspect ratio */
-    }
-
-    .hero div {
-        width: 100%; /* Ensure text container adapts to width */
-    }
-}
-
-/* Grid Layout for Cards (Two cards per row on smaller screens) */
-@media (max-width: 768px) {
-    .categories-grid {
-        grid-template-columns: repeat(2, 1fr); /* Two cards per row */
-        gap: 15px; /* Adjust spacing between cards */
-    }
-}
-
-@media (max-width: 480px) {
-    .categories-grid {
-        grid-template-columns: repeat(2, 1fr); /* Continue with two cards per row */
-        gap: 10px; /* Slightly smaller gaps for very small screens */
-    }
-}
+ 
  </style>
 </head>
 <body>
