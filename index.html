@@ -114,32 +114,7 @@
             background-color: #3d8b40;
         }
         
-        /* Hero Section */
-        .hero {
-            padding: 80px 0;
-            background: linear-gradient(135deg, rgba(76, 175, 80, 0.1) 0%, rgba(255, 152, 0, 0.1) 100%);
-            text-align: center;
-        }
-        
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-            color: var(--text-dark-grey);
-        }
-        
-        .hero p {
-            font-size: 18px;
-            color: var(--muted-grey);
-            max-width: 700px;
-            margin: 0 auto 40px;
-        }
-        
-        .hero-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-        
+         
         .btn-primary {
             background-color: var(--primary-green);
             color: white;
@@ -394,7 +369,32 @@
             color: #aaa;
             font-size: 14px;
         }
-        
+        /* Hero Section */
+       
+        .hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('all.png') no-repeat center center;
+    background-size: cover;
+    color: white;
+    padding: 120px 0;
+    text-align: left;
+}
+
+.hero-section h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--light);
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+.hero-section-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        } 
         /* Responsive Styles */
         @media (max-width: 768px) {
             .header-container {
@@ -410,11 +410,11 @@
                 margin: 0 15px;
             }
             
-            .hero h1 {
+            .hero-section h1 {
                 font-size: 36px;
             }
             
-            .hero-buttons {
+            .hero-section-buttons {
                 flex-direction: column;
                 align-items: center;
             }
@@ -438,11 +438,11 @@
                 margin: 5px 10px;
             }
             
-            .hero h1 {
+            .hero-section h1 {
                 font-size: 28px;
             }
             
-            .hero p {
+            .hero-section p {
                 font-size: 16px;
             }
             
@@ -454,7 +454,42 @@
                 font-size: 28px;
             }
         }
-        
+
+        @media (max-width: 768px) {
+    .footer-container {
+        text-align: center; /* Center-align the text content */
+        display: flex; /* Change grid to flex layout for better stacking */
+        flex-direction: column; /* Stack the footer columns vertically */
+        gap: 20px; /* Reduce the gap between the columns */
+    }
+
+    .footer-col {
+        text-align: center; /* Center-align each column's text */
+    }
+
+    .footer-col h4 {
+        position: relative;
+        display: inline-block; /* Ensure the heading width matches the text width */
+    }
+
+    .footer-col h4::after {
+        content: '';
+        position: absolute;
+        left: 50%; /* Start at the center of the heading */
+        transform: translateX(-50%); /* Adjust for the width of the underline */
+        bottom: 0;
+        width: 50px; /* Set the width of the green underline */
+        height: 2px; /* Set the height of the underline */
+        background-color: var(--primary-green); /* Use the green color for the underline */
+    }
+    .social-links {
+        display: flex; /* Ensure social links are displayed as a row */
+        justify-content: center; /* Center the links */
+        align-items: center; /* Vertically align the links */
+        gap: 15px; /* Add spacing between social links */
+        margin-top: 20px; /* Add some space above the links */
+    }
+}
     </style>
 </head>
 <body>
@@ -479,14 +514,14 @@
             </div>
         </div>
     </header>
-    
-     <!-- Updated Hero Section -->
-<section class="hero">
-    <div class="container" style="display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap;">
-        <img src="all.png" alt="All Categories" style="width: 45%; height: auto; border-radius: 10px;">
-        <div style="text-align: center; width: 50%;">
-            <h1>On-Demand Delivery at Your Fingertips</h1>
-            <p>Get groceries, food, daily essentials, and more delivered to your doorstep in minutes.</p>
+ <!-- Hero Section -->
+ <section class="hero-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h1>On-Demand Delivery at Your Fingertips</h1>
+                <p>Get groceries, food, daily essentials, and more delivered to your doorstep in minutes.</p>
+            </div>
             <div class="hero-buttons" style="display: flex; justify-content: center; gap: 10px; margin-top: 20px;">
                 <a href="#" class="btn btn-primary">Shop Now</a>
                 <a href="#" class="btn btn-secondary">Become a Seller</a>
@@ -494,7 +529,6 @@
         </div>
     </div>
 </section>
-
     <!-- New Popular Categories Section -->
     <section class="popular-categories" id="popular-categories" style="padding: 80px 0; background-color: var(--light-grey);">
         <div class="container">
